@@ -2,7 +2,7 @@ const Employee               = require('../schemas/employee');
 
 exports.signup = async function (data) {
     try {
-        let emp = await Employee.findOne( {employeeCode: data.employeeCode} );
+        let emp = await Employee.findOne( {email: data.email} );
         
         if(emp) return { data: false, message: "Employee Already exists."}; 
         
@@ -18,8 +18,6 @@ exports.signup = async function (data) {
 
 exports.profile = async function  (req, res) {
     try {
-        console.log(req.query.id);
-        
         let user = await Employee.findOne({ id: req.query.id });
         console.log(user);
         

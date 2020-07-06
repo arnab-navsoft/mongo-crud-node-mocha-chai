@@ -10,7 +10,7 @@ const EmployeeSchema  = new mongoose.Schema({
     },
     name: String,
     email: String,
-    employeeCode: String,
+    employeeCode: Number,
     joinedOn: { type: Date, default: Date.now },
     updatedOn: { type: Date, default: Date.now }
 })

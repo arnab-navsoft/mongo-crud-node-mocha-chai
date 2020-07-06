@@ -2,7 +2,7 @@ const EmployeeService = require('../services/services')
 
 exports.signup = async function (req, res, next) {
     try {
-        let signupData = await EmployeeService.signup(req.body);        
+        let signupData = await EmployeeService.signup(req.body); 
         if(signupData){
             return res.status(200).json(signupData);
         }
