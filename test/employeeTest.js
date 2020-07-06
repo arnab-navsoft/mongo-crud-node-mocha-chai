@@ -10,7 +10,7 @@ var expect = chai.expect;
 
 chai.use(chaiHttp);
 
-describe('/add employee', () => {
+describe('add employee, try to add same employee again, add another employee, update details of second employee, see profile of second employee \n delete second employee, see all emplyees in db, i.e. 1', () => {
     let id;
     it('it should add an employee with name Arnab Das and email arnab.das@navsoft.in into db', (done) => {
         let employee = {
